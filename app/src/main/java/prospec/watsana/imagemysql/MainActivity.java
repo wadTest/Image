@@ -87,9 +87,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         GetImageFromGalleryButton = (Button)findViewById(R.id.buttonSelect);
-
         UploadImageOnServerButton = (Button)findViewById(R.id.buttonUpload);
-
         ShowSelectedImage = (ImageView)findViewById(R.id.imageView);
 
         imageName=(EditText)findViewById(R.id.imageName);
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 showPictureDialog();
-                
+
             }
         });
 
@@ -232,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
                 HashMapParams.put(ImageName, ConvertImage);
 
-                String FinalData = imageProcessClass.ImageHttpRequest("http://192.168.1.5/Android%20Upload%20Image/upload-image-to-server.php", HashMapParams);
+                String FinalData = imageProcessClass.ImageHttpRequest("http://119.59.103.121/app_mobile/image/upload-image-to-server.php", HashMapParams);
 
                 return FinalData;
             }

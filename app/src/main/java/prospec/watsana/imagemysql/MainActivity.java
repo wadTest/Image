@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         UploadImageOnServerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,10 +124,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void showPictureDialog(){
         AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
-        pictureDialog.setTitle("Select Action");
+        pictureDialog.setTitle("เลือกการดำเนินการ");
         String[] pictureDialogItems = {
-                "Photo Gallery",
-                "Camera" };
+                "แกลเลอรี่ภาพ",
+                "กล้อง" };
         pictureDialog.setItems(pictureDialogItems,
                 new DialogInterface.OnClickListener() {
                     @Override
@@ -176,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } catch (IOException e) {
                     e.printStackTrace();
-                    Toast.makeText(MainActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "ล้มเหลว !", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -205,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
                 super.onPreExecute();
 
-                progressDialog = ProgressDialog.show(MainActivity.this,"Image is Uploading","Please Wait",false,false);
+                progressDialog = ProgressDialog.show(MainActivity.this,"กำลังอัพโหลดรูปภาพ","รอสักครู่...",false,false);
             }
 
             @Override
@@ -328,9 +327,9 @@ public class MainActivity extends AppCompatActivity {
             }
             else {
 
-                Toast.makeText(MainActivity.this, "Unable to use Camera..Please Allow us to use Camera", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "ไม่สามารถใช้กล้องถ่ายรูปได้โปรดให้เราใช้กล้องถ่ายรูป", Toast.LENGTH_LONG).show();
 
             }
         }
     }
-}
+}//Main Class
